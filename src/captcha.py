@@ -19,6 +19,7 @@ def captcha_builder(resp):
     window = sg.Window('Enter Captcha', layout, finalize=True)
     window.TKroot.focus_force()         # focus on window
     window.Element('inp').SetFocus()    # focus on field
+    window.BringToFront()    # To make Captcha Window to appear above all windows
     event, values = window.read()
     window.close()
     return values['inp']
