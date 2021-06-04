@@ -331,8 +331,8 @@ def book_appointment(request_header, details):
     try:
         valid_captcha = True
         while valid_captcha:
-            captcha = generate_captcha(request_header)
-            details['captcha'] = captcha
+#             captcha = generate_captcha(request_header)
+#             details['captcha'] = captcha
 
             print('================================= ATTEMPTING BOOKING ==================================================')
 
@@ -699,4 +699,3 @@ def generate_token_OTP(mobile, request_header):
 
         except Exception as e:
             print(str(e))
-
